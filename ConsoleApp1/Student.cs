@@ -12,11 +12,16 @@ namespace ConsoleApp1
         public string Name { get; set; }
         public List<float> Grades { get ;set; }
 
-        public Student(int id, string name, List<float> grades)
+        public Student(int id, string name)
         {
             Id = id;
             Name = name;
-            Grades = grades;
+            Grades = new List<float>();
+        }
+
+        public void AddGrades(float grade)
+        {
+            Grades.Add(grade);
         }
     }
 }

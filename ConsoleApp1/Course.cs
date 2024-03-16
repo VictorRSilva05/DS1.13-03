@@ -9,13 +9,15 @@ namespace ConsoleApp1
     internal class Course
     {
         public string Name { get; set; }
-        public string Id { get; set; }
-        List<Discipline> Disciplines { get; set; }
+        public int Id { get; set; }
+        public List<Discipline> Disciplines { get; set; }
 
-        public Course(string name, string id)
+        public Course() { }
+        public Course(string name, int id)
         {
             Name = name;
             Id = id;
+            Disciplines = new List<Discipline>();
         }
 
         public void AddDiscipline(Discipline discipline)
