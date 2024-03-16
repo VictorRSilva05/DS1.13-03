@@ -23,5 +23,10 @@ namespace ConsoleApp1
         {
             Grades.Add(grade);
         }
+
+        public string AverageGrade()
+        {
+            return Grades.Average().ToString("F1");
+        }
     }
 }
