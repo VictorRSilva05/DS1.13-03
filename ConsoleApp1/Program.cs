@@ -4,8 +4,10 @@
     {
         Program()
         {
+            //Victor Rafael da Silva
             College college = new College();
 
+            string input;
             byte selector = default;
 
             while (selector != 9)
@@ -21,8 +23,12 @@
                 Console.WriteLine("8- Average score of the class");
                 Console.WriteLine("9- Exit");
                 Console.Write("\nOption: ");
-                selector = byte.Parse(Console.ReadLine());
-
+                input = Console.ReadLine();
+                while (!byte.TryParse(input, out selector))
+                {
+                    Console.Write("Invalid input, try again: ");
+                    input = Console.ReadLine();
+                }
                 switch (selector)
                 {
                     case 1:
@@ -52,9 +58,11 @@
                     case 9:
                         Console.WriteLine("\nBye ;-;");
                         break;
-                    default: Console.WriteLine("Invalid option");
+                    default:
+                        Console.WriteLine("Invalid option");
                         break;
                 }
+
             }
         }
 

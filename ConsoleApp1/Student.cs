@@ -8,6 +8,7 @@ namespace ConsoleApp1
 {
     internal class Student
     {
+        //Victor Rafael da Silva
         public int Id { get; set; }
         public string Name { get; set; }
         public List<float> Grades { get ;set; }

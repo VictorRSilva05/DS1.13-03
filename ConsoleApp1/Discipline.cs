@@ -8,15 +8,18 @@ namespace ConsoleApp1
 {
     internal class Discipline
     {
+        //Victor Rafael da Silva
         public string Name { get; set; }
         public int Id { get; set; }
+        public string CourseName { get; set; }
         public List<Student> Students { get; set; }
 
-        public Discipline(string name, int id)
+        public Discipline(string name, int id, string courseName)
         {
             Name = name;
             Id = id;
             Students = new List<Student>();
+            CourseName = courseName;
         }
 
         public void AddStudent(Student student)

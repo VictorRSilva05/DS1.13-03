@@ -8,6 +8,7 @@ namespace ConsoleApp1
 {
     internal class Course
     {
+        //Victor Rafael da Silva
         public string Name { get; set; }
         public int Id { get; set; }
         public List<Discipline> Disciplines { get; set; }
